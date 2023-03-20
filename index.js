@@ -30,8 +30,8 @@ async function main() {
                 //init wallet
                 const wallet = new ethers.Wallet(pk, arbiProvider);
                 //get nonce
-                const nonceman = new NonceManager(wallet);
-                let nonce = await nonceman.connect(arbiProvider).getNonce();
+                const nonceManager = new NonceManager(wallet);
+                let nonce = await nonceManager.connect(arbiProvider).getNonce();
 
                 //claim ARB          
                 const tx1 = await tokenDistributorContract.connect(wallet).claim({nonce: nonce});
