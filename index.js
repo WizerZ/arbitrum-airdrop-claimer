@@ -3,8 +3,8 @@ const env = require("./env.json");
 var Promise = require("bluebird");
 const abi = require("./abi.json");
 
-const arbiProvider = new ethers.JsonRpcProvider("https://endpoints.omniatech.io/v1/arbitrum/one/public");
-const ethProvider = new ethers.JsonRpcProvider("https://eth.llamarpc.com");
+const arbiProvider = new ethers.JsonRpcProvider("https://arb1.arbitrum.io/rpc");
+const ethProvider = new ethers.JsonRpcProvider("https://rpc.ankr.com/eth");
 
 const tokenDistributorAddress = "0x67a24CE4321aB3aF51c2D0a4801c3E111D88C9d9"
 const ARBAdress = "0x912CE59144191C1204E64559FE8253a0e49E6548"
